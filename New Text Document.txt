@@ -1,0 +1,30 @@
+
+package Myself1;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		char gender ='N';
+		float cgpa=3.65f;
+		double gpa=3.97;
+		int numOfstudent=35;
+		System.out.println("Hello World");
+		System.out.println(cgpa);
+		System.out.println(gender);
+		System.out.println(numOfstudent);
+		System.out.println("Your term gpa is:" + gpa);
+		System.out.print("Hello");
+		System.out.print("World");
+		Scanner sc=new Scanner(System.in);
+		int userInput=sc.nextInt();
+		System.out.println("User input+17=" + (userInput+17));
+				
+		
+		
+		
+		
+		
+	}
+
+}
