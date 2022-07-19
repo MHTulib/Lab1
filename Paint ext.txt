@@ -1,0 +1,167 @@
+package paint;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Point t1= new Point(1,2);
+		System.out.println(t1);
+		Shape s1= new Shape("red",t1);
+		System.out.println(s1);
+		
+		Square sq1=new Square("Blue",t1, 4.5);
+		System.out.println(sq1);
+		System.out.println(sq1.getColor());
+	}
+
+}
+
+----------------------------------------------------------------------
+	
+package paint;
+
+public class Point {
+	private int x;
+	private int y;
+	public Point(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+	public int getX() {
+		return x;
+	}
+	public void setX(int x) {
+		this.x = x;
+	}
+	public int getY() {
+		return y;
+	}
+	public void setY(int y) {
+		this.y = y;
+	}
+	@Override
+	public String toString() {
+		return "("+x+","+y+")";
+	}
+	
+	
+
+}
+------------------------------------------------------------------------------
+package paint;
+
+public class Shape {
+
+	private String color;
+	private Point referencePoint;
+	public Shape(String color, Point referencePoint) {
+		super();
+		this.color = color;
+		this.referencePoint = referencePoint;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public Point getReferencePoint() {
+		return referencePoint;
+	}
+	public void setReferencePoint(Point referencePoint) {
+		this.referencePoint = referencePoint;
+	}
+	@Override
+	public String toString() {
+		return "Shape [color=" + color + ", referencePoint=" + referencePoint + "]";
+	}
+	
+	
+}
+-------------------------------------------------------------------------------
+package paint;
+
+public class Square extends Shape {
+	
+	private double side;
+	
+	public Square(String color, Point referencePoint,double side) {
+		super(color, referencePoint);
+		this.side=side;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Square [side=" + side + "]";
+	}
+
+	public double getSide() {
+		return side;
+	}
+
+	public void setSide(double side) {
+		this.side = side;
+	}
+	
+
+}
+--------------------------------------------------------------------
+package paint;
+
+public class Rect extends Shape {
+	private double side1;
+	private double side2;
+	public Rect(String color, Point referencePoint, double side1, double side2) {
+		super(color, referencePoint);
+		this.side1 = side1;
+		this.side2 = side2;
+	}
+	public double getSide1() {
+		return side1;
+	}
+	public void setSide1(double side1) {
+		this.side1 = side1;
+	}
+	public double getSide2() {
+		return side2;
+	}
+	public void setSide2(double side2) {
+		this.side2 = side2;
+	}
+	@Override
+	public String toString() {
+		return "Rect [side1=" + side1 + ", side2=" + side2 + "]";
+	}
+	
+
+}
+----------------------------------------------------------
+package paint;
+
+public class Circle extends Shape {
+	private double radius;
+
+	public Circle(String color, Point referencePoint, double radius) {
+		super(color, referencePoint);
+		this.radius = radius;
+	}
+
+	public double getRadius() {
+		return radius;
+	}
+
+	public void setRadius(double radius) {
+		this.radius = radius;
+	}
+
+	@Override
+	public String toString() {
+		return "Circle [radius=" + radius + "]";
+	}
+
+	
+}
+
+
+
