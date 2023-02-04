@@ -1,0 +1,46 @@
+#include <iostream>
+#include "class2252.h"
+
+using namespace std;
+
+int main()
+{
+    Data d1;
+    Data d2(3);
+    d1.print();
+   d2.print();
+
+    return 0;
+}
+@@
+using namespace std;
+
+
+
+class Data{
+private:
+    int data ;
+public:
+    Data(){
+    data=2;
+    }
+    Data(int x){
+        data=x;
+    }
+    void print(){
+        cout<<"value "<<data<<endl;
+    }
+};
+@@
+#include <iostream>
+    #include"class2252.h"
+using namespace std;
+    Data::Data::(){
+    value=2;
+    }
+    Data::Data(int x){
+    value=x;
+    void Data::print(){
+    cout<<"value: "<<value<<endl;
+    }
+
